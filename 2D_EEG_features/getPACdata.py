@@ -4,24 +4,18 @@ Created on Wed Feb 10 15:45:38 2021
 
 @author: David
 """
-#cd /work/TIBIR/s201302/QPC/CNN
 
 from scipy.io import loadmat
 import torch
-
 import numpy as np
-
 import matplotlib.pyplot as plt
 from tensorpac import Pac
 from tensorpac.signals import pac_signals_tort
 
-#%%
 
 
 # load QPC raw data and labels
 AHL = loadmat('/work/TIBIR/s201302/CNN/EEG_data/AH-L-EEG.mat')['Thisfeature']
-
-
 labels = loadmat('/work/TIBIR/s201302/CNN/EEG_data/AH-L-labels.mat')['labels'].T
 
 print('Total number of NaN entry is :',int(AHL[np.isnan(AHL)].shape[0]))
