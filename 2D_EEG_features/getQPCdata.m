@@ -3,10 +3,8 @@ clear
 clc
 close all
 
-cd /endosome/work/TIBIR/s201302/QPC/QPCdata
 %This scritp computes averaged ERP from two or more electrode sites to test
 %for encoding and compares with non-encoding.
-addpath(genpath('/project/TIBIR/Lega_lab/shared/lega_ansir/shared_code/eeg_toolbox'));
 addpath(genpath('/work/TIBIR/s201302'))
 
 
