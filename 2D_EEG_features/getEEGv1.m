@@ -3,12 +3,8 @@ clear
 clc
 close all
 
-cd /endosome/work/TIBIR/s201302/EEGDataset/EEGdataFR1
 %This scritp computes averaged ERP from two or more electrode sites to test
 %for encoding and compares with non-encoding.
-addpath(genpath('/project/TIBIR/Lega_lab/shared/lega_ansir/shared_code/eeg_toolbox'));
-addpath(genpath('/work/TIBIR/s201302'))
-
 
 % subj_sessions = {'CC016','UT004a','UT022','UT023','UT049','UT050','UT060','UT063',...
 %     'UT064','UT067','UT069','UT074','UT081','UT090','UT095','UT105','UT108','UT112','UT113','UT117',...
@@ -41,7 +37,7 @@ for subind = 1:length(subj_sessions)
     
     
      
-    events2load = ['/work/TIBIR/s201302/EEGDataset/FR1events/',Thissubj,'.mat'];
+    events2load = ['~/EEGDataset/FR1events/',Thissubj,'.mat'];
     load(events2load)   
     events = filterStruct(events,{'~strcmp(eegfile,'''')'}); %this does nothing
           
